@@ -1,16 +1,24 @@
 public class Jogador {
     // atributos -- incluir
 
+    private Carta[] mao;
+    private int indiceMao;
+    private final int tamanhoMao = 3;
+
     public Jogador() {
         // implementar
+        mao = new Carta[tamanhoMao];
+        indiceMao = 0;
     }
 
-    public Carta[] getMao() {
-        // implementar
-    }
+//    public Carta[] getMao() {
+//        // implementar
+//
+//    }
 
     public void receberCarta(Carta c) {
         // implementar
+        mao[indiceMao++]=c;
     }
 
     // --------------- não alterar daqui para baixo -----------------------

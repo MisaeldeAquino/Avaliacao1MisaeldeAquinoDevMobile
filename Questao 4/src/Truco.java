@@ -1,21 +1,34 @@
 public class Truco {
 
     // atributos -- inserir
+    private Jogador jogador1;
+    private Jogador jogador2;
+    private Baralho baralho;
+    private Carta cartaVirada;
 
     public Truco() {
         // implementar
+        jogador1 = new Jogador();
+        jogador2 = new Jogador();
+        baralho = new Baralho();
     }
 
     private void embaralhaCartas() {
         // implementar
+        baralho.embaralhar();
     }
 
     private void distribuiMaos() {
         // implementar
+        for (int i = 0; i < 3; i++) {
+            jogador1.receberCarta(baralho.distribuir());
+            jogador2.receberCarta(baralho.distribuir());
+        }
     }
 
     private void inicializaManilha() {
         // implementar
+        cartaVirada = baralho.distribuir();
     }
 
     // ---------------------- não alterar daqui para baixo ------------------------------
